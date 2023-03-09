@@ -1,0 +1,30 @@
+<template>
+    
+    <lightning-card title="Iteration">
+
+<template iterator:it={country} >
+<p key={it.value} >Country:  {it.value} </p>
+</template>
+
+    </lightning-card>
+
+    <lightning-card title="Iteration 2">
+
+  
+      <lightning-button label="Country" name="cntry" onclick={handleClick}></lightning-button>
+     <template if:true={goster} iterator:it={country}>
+            <div key={it.value} class='slds-p-around_medium lgc-bg'> {it.value} </div>
+        </template>
+        <lightning-button label="Animal" name="nml" onclick={handleClick}></lightning-button>
+
+        <template if:true={goster1} iterator:it={animal}>
+            <div key={it.value} class='slds-p-around_medium lgc-bg'> {it.value} </div>
+        </template>
+        <lightning-button label="Friends" name="frnd" onclick={handleClick}></lightning-button>
+
+        <template if:true={goster2} iterator:it={friend}>
+            <div key={it.value} class='slds-p-around_medium lgc-bg'> {it.value} </div>
+        </template>
+
+    </lightning-card> 
+ </template>

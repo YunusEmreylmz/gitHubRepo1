@@ -1,0 +1,13 @@
+<Template>
+    <lightning-card>
+        <template if:true={acclist}>
+            <lightning-datatable
+            key-field="Id"
+            data={acclist}
+            columns={stn}>
+    </lightning-datatable>
+        </template>
+ 
+    </lightning-card>       
+  
+</template>

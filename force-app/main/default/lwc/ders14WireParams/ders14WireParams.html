@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+
+<div class="slds-m-top_medium slds-m-bottom_x-large">
+    <lightning-input label="Search Name" onchange={handleChange} style="width: 100px;"></lightning-input>
+    <lightning-button label="+2 Limit" onclick={handleClick}></lightning-button>
+    
+</div>
+<br>
+        <template if:true={conlist}>
+            <lightning-datatable
+            key-field="Id"
+            data={conlist}
+            columns={stn}>
+    </lightning-datatable>
+        </template>
+        
+    </lightning-card>     
+</template>

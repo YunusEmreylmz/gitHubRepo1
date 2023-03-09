@@ -1,0 +1,33 @@
+<template>
+    <lightning-card>
+
+        <table class='slds-table slds-table_bordered slds-table_cell-buffer' border="2px solid black">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+    </tr>
+</thead>
+
+<tbody>
+
+    <template for:each={customerList} for:item="cust">
+        <tr key={cust.id}>
+<td>{cust.id} </td>           
+<td>{cust.name} </td>
+<td>{cust.phone} </td>
+<td>{cust.email} </td>
+        </tr>
+       c-child
+    </template>
+ 
+</tbody>
+ 
+</table>
+
+<c-ders-6-resim></c-ders-6-resim>
+
+    </lightning-card>
+</template>

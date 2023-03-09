@@ -1,0 +1,37 @@
+<template>
+    <lightning-card>
+
+<template for:each={acclist} for:item="acc">
+
+    <div key={acc.Id}>Name: {acc.Name} Phone:  {acc.Phone} Rating: {acc.Rating} Site: {acc.Site} </div>
+</template>
+
+<table class='slds-table slds-table_bordered slds-table_cell-buffer' border="2px solid black">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Site</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    
+        <template for:each={acclist} for:item="cust">
+            <tr key={cust.Id}>
+    <td>{cust.Id} </td>           
+    <td>{cust.Name} </td>
+    <td>{cust.Phone} </td>
+    <td>{cust.Site} </td>
+            </tr>
+        </template>
+     
+    </tbody>
+     
+    </table>
+
+    <br>
+
+    </lightning-card>
+</template>
